@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;550;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom scrollbar and smooth transitions support */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #1e1e24 #09090b;
+}
+
+body {
+  background-color: #09090b; /* Frosted Glass Obsidian Charcoal */
+}
+
+/* Print layout optimizations for Curriculum Vitae modal print support */
+@media print {
+  body {
+    background-color: white !important;
+    color: #09090b !important;
+  }
+  header, footer, button, nav, #home, #about, #skills, #projects, #certificates, #contact {
+    display: none !important;
+  }
+  #printed-resume-container {
+    display: block !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+  }
+}
